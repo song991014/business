@@ -1,0 +1,18 @@
+info:
+  name: 실시간 활성서비스 scouter
+  type: http
+  seq: 13
+
+http:
+  method: GET
+  url: http://130.162.132.194:6188/scouter/v1/activeService/ofObject/-603475746
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4MDk4NDk0OCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTc4MDk4NTg0OH0.Z8GoaGXIN5Zldn-FZK9Z6QbBXDO2pRzlfa9ERpDWjyw
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

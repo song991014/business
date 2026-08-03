@@ -1,0 +1,25 @@
+info:
+  name: counter Cpu
+  type: http
+  seq: 9
+
+http:
+  method: GET
+  url: http://193.123.247.238:8091/api/counter?name=ProcCpu&minutes=5
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4MTE1MjI5MCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTc4MTE1MzE5MH0.dXHO-VVOTg36CiAWU-jixV08AGeGWFjwqIEICNRK6f0
+  params:
+    - name: name
+      value: ProcCpu
+      type: query
+    - name: minutes
+      value: "5"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

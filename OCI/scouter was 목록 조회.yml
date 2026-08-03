@@ -1,0 +1,18 @@
+info:
+  name: scouter was 목록 조회
+  type: http
+  seq: 16
+
+http:
+  method: GET
+  url: http://localhost:8091/api/scouter/agents/was
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4MTA4MTA5OSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTc4MTA4MTk5OX0.mXnlMRFmO70bn9bmJOci-Ych0hWshiORAFPRe_GZ8FU
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

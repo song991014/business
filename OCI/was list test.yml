@@ -1,0 +1,21 @@
+info:
+  name: was list test
+  type: http
+  seq: 18
+
+http:
+  method: POST
+  url: http://193.123.247.238:8091/api/xlog/was-list
+  headers:
+    - name: Authorization
+      value: Bearer {{json_web_token_139k}}
+  body:
+    type: json
+    data: '{ "providerId": "dbscloud_" }'
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

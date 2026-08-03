@@ -1,0 +1,22 @@
+info:
+  name: 개발 xlog
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{process.env.API_URL}}/api/xlog?minutes=1"
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4NTczMjAwMywicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTc4NTczMjkwM30.mcxB6HyTZUMfBOK9TGJIAZwYnmUczu99O_la5q3JmLU
+  params:
+    - name: minutes
+      value: "1"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,19 @@
+info:
+  name: counter 전체 목록 조회
+  type: http
+  seq: 8
+
+http:
+  method: GET
+  url: http://193.123.247.238:8091/api/counter?minutes=1
+  params:
+    - name: minutes
+      value: "1"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

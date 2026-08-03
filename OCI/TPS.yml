@@ -1,0 +1,28 @@
+info:
+  name: TPS
+  type: http
+  seq: 19
+
+http:
+  method: GET
+  url: http://193.123.247.238:8091/api/counter/grouped?minutes=5&name=TPS&objName=/medical-mon-svr/WAS-OCISERVER-01
+  headers:
+    - name: Authorization
+      value: Bearer {{json_web_token_0fkf}}
+  params:
+    - name: minutes
+      value: "5"
+      type: query
+    - name: name
+      value: TPS
+      type: query
+    - name: objName
+      value: /medical-mon-svr/WAS-OCISERVER-01
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

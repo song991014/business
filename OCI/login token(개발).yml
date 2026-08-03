@@ -1,0 +1,22 @@
+info:
+  name: login token(개발)
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{process.env.API_URL}}/api/auth/login"
+  body:
+    type: json
+    data: |-
+      {
+        "username": "{{process.env.API_USER}}",
+        "password": "{{process.env.API_PW}}"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

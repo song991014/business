@@ -1,0 +1,104 @@
+opencollection: 1.0.0
+
+info:
+  name: OCI
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+
+request:
+  variables:
+    - name: json_web_token_139k
+      value: ""
+    - name: bearer_token_189k
+      value: ""
+    - name: bearer_token_0dc5
+      value: ""
+    - name: supabase_service_role_api_key_0a7d
+      value: ""
+    - name: supabase_service_role_api_key_03pj
+      value: ""
+    - name: bearer_token_0s0r
+      value: ""
+    - name: json_web_token_164q
+      value: ""
+    - name: bearer_token_0a1v
+      value: ""
+    - name: supabase_service_role_api_key_14ox
+      value: ""
+    - name: bearer_token_17in
+      value: ""
+    - name: bearer_token_0vxs
+      value: ""
+    - name: json_web_token_0rv0
+      value: ""
+    - name: json_web_token_19ve
+      value: ""
+    - name: bearer_token_0wd2
+      value: ""
+    - name: json_web_token_0bj9
+      value: ""
+    - name: bearer_token_15dh
+      value: ""
+    - name: json_web_token_0fkf
+      value: ""
+    - name: bearer_token_164p
+      value: ""
+    - name: supabase_service_role_api_key_07xv
+      value: ""
+    - name: bearer_token_14bn
+      value: ""
+    - name: supabase_service_role_api_key_0cqg
+      value: ""
+    - name: bearer_token_0w6e
+      value: ""
+    - name: json_web_token_0lr0
+      value: ""
+    - name: bearer_token_08yl
+      value: ""
+    - name: json_web_token_0vwh
+      value: ""
+    - name: bearer_token_182e
+      value: ""
+    - name: supabase_service_role_api_key_0akm
+      value: ""
+    - name: bearer_token_0ra8
+      value: ""
+    - name: json_web_token_0akm
+      value: ""
+    - name: supabase_service_role_api_key_181i
+      value: ""
+    - name: bearer_token_0mpr
+      value: ""
+    - name: bearer_token_0hc2
+      value: ""
+    - name: supabase_service_role_api_key_0w0h
+      value: ""
+    - name: bearer_token_0862
+      value: ""
+    - name: supabase_service_role_api_key_0ids
+      value: ""
+    - name: bearer_token_19q7
+      value: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4NTczMjA4OCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTc4NTczMjk4OH0.L4o2Zws0BHGeXJUNpbUxKJ-j9laSPM4XyFJJG_Xmx3s
+    - name: json_web_token_0bbr
+      value: ""
+    - name: supabase_service_role_api_key_0bbr
+      value: ""
+    - name: bearer_token_18t3
+      value: ""
+    - name: json_web_token_0hfo
+      value: ""
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

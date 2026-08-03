@@ -1,0 +1,25 @@
+info:
+  name: 영역별 힙메모리 사용량(초기)
+  type: http
+  seq: 22
+
+http:
+  method: GET
+  url: http://193.123.247.238:8091/api/counter/memoryArea?minutes=5&objName=/medical-mon-svr/WAS-OCISERVER-01
+  headers:
+    - name: Authorization
+      value: Bearer {{supabase_service_role_api_key_0cqg}}
+  params:
+    - name: minutes
+      value: "5"
+      type: query
+    - name: objName
+      value: /medical-mon-svr/WAS-OCISERVER-01
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

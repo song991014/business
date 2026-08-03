@@ -1,0 +1,18 @@
+info:
+  name: 활성서비스 slow
+  type: http
+  seq: 14
+
+http:
+  method: GET
+  url: http://localhost:8091/api/scouter/test/slow
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4MDk5MjU3MSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTc4MDk5MzQ3MX0.TL_VOnSUi2ICPds-WRVDhwc83rqVJ9urH069DjKLN0k
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

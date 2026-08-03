@@ -1,0 +1,22 @@
+info:
+  name: counter 메모리
+  type: http
+  seq: 10
+
+http:
+  method: GET
+  url: http://localhost:8091/api/counter/heap?minutes=5
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4MDk4OTE2Nywicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTc4MDk5MDA2N30.vWFXS9AiQl4OD45EAdjgbGJBjR2WnaGOh4qChpdlUa8
+  params:
+    - name: minutes
+      value: "5"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

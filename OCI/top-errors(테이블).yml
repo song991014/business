@@ -1,0 +1,22 @@
+info:
+  name: top-errors(테이블)
+  type: http
+  seq: 34
+
+http:
+  method: GET
+  url: http://193.123.247.238:8091/api/xlog/top-errors?objName=/medical-mon-svr/WAS-OCISERVER-01
+  headers:
+    - name: Authorization
+      value: Bearer {{supabase_service_role_api_key_0bbr}}
+  params:
+    - name: objName
+      value: /medical-mon-svr/WAS-OCISERVER-01
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

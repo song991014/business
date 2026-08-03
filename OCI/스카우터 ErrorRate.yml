@@ -1,0 +1,37 @@
+info:
+  name: 스카우터 ErrorRate
+  type: http
+  seq: 33
+
+http:
+  method: GET
+  url: http://130.162.132.194:6188/scouter/v1/counter/ErrorRate?objHashes=1550806625&startTimeMillis={{startTime}}&endTimeMillis={{endTime}}
+  headers:
+    - name: Cookie
+      value: JSESSIONID=node0e8syoq258w3u10962uznby2dn200.node0
+  params:
+    - name: objHashes
+      value: "1550806625"
+      type: query
+    - name: startTimeMillis
+      value: "{{startTime}}"
+      type: query
+    - name: endTimeMillis
+      value: "{{endTime}}"
+      type: query
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: before-request
+      code: "const now = Date.now();\r
+
+        bru.setVar(\"endTime\", now);\r
+
+        bru.setVar(\"startTime\", now - 5 * 60 * 1000);"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

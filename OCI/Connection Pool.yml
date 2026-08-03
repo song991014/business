@@ -1,0 +1,22 @@
+info:
+  name: Connection Pool
+  type: http
+  seq: 21
+
+http:
+  method: GET
+  url: http://193.123.247.238:8091/api/counter/connectionPool/latest?objName=/medical-mon-svr/WAS-OCISERVER-01
+  headers:
+    - name: Authorization
+      value: Bearer {{supabase_service_role_api_key_07xv}}
+  params:
+    - name: objName
+      value: /medical-mon-svr/WAS-OCISERVER-01
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

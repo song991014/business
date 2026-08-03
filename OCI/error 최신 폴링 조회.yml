@@ -1,0 +1,25 @@
+info:
+  name: error 최신 폴링 조회
+  type: http
+  seq: 36
+
+http:
+  method: GET
+  url: http://193.123.247.238:8091/api/xlog/errors/latest?since=1785722176951&objName=/medical-mon-svr/WAS-OCISERVER-01
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4NTczMjA4OCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTc4NTczMjk4OH0.L4o2Zws0BHGeXJUNpbUxKJ-j9laSPM4XyFJJG_Xmx3s
+  params:
+    - name: since
+      value: "1785722176951"
+      type: query
+    - name: objName
+      value: /medical-mon-svr/WAS-OCISERVER-01
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
