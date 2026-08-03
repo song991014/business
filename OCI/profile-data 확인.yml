@@ -8,7 +8,7 @@ http:
   url: "{{process.env.API_URL}}/api/xlog/-752146251125600400/profile"
   headers:
     - name: Authorization
-      value: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4NTczMjA4OCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTc4NTczMjk4OH0.L4o2Zws0BHGeXJUNpbUxKJ-j9laSPM4XyFJJG_Xmx3s
+      value: Bearer  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4NTczNjM2OSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTc4NTczNzI2OX0.qes0wDNEQy7o9QygevgTXNqaLgkrn8-5cvXF_TK1TRU
   auth: inherit
 
 settings:

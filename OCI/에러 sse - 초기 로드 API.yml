@@ -1,0 +1,22 @@
+info:
+  name: "에러 sse : 초기 로드 API"
+  type: http
+  seq: 38
+
+http:
+  method: GET
+  url: "{{process.env.API_URL}}/api/xlog/errors?limit=10&objName=/medical-mon-svr/WAS-OCISERVER-01"
+  params:
+    - name: limit
+      value: "10"
+      type: query
+    - name: objName
+      value: /medical-mon-svr/WAS-OCISERVER-01
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

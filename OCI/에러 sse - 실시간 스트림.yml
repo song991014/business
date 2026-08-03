@@ -1,0 +1,22 @@
+info:
+  name: "에러 sse : 실시간 스트림"
+  type: http
+  seq: 39
+
+http:
+  method: GET
+  url: "{{process.env.API_URL}}/sse/xlog/errors?objName=/medical-mon-svr/WAS-OCISERVER-01"
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4NTc0NDEwMywicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTc4NTc0NTAwM30.ocuJIm8QpIcWqqqSd0-z2eXX0aGRIlsWcCUaUbfugnw
+  params:
+    - name: objName
+      value: /medical-mon-svr/WAS-OCISERVER-01
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
