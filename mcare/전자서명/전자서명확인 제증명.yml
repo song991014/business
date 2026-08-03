@@ -1,0 +1,22 @@
+info:
+  name: 전자서명확인 제증명
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: https://app1.ywmc.or.kr/qapi-dev/cert/get_certSignInfo
+  body:
+    type: json
+    data: "{\r
+
+      \    \"hospitalCd\":\"31100767\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,30 @@
+info:
+  name: 전송 및 발행진행상태 조회
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: https://ep-api-dev.lemonhc.com:19211/test-pharm-api/api/pharmDrug/getTransJojeStatus
+  body:
+    type: json
+    data: "{\r
+
+      \    \"hospitalCd\": \"37100033\",\r
+
+      \    \"patientId\": \"00000002\",\r
+
+      \    \"decryptPatientId\": null,\r
+
+      \    \"serialDate\": \"20260322\",\r
+
+      \    \"serialNo\": \"81001\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

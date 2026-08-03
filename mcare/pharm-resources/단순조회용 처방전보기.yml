@@ -1,0 +1,15 @@
+info:
+  name: 단순조회용 처방전보기
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: https://ep-api-dev.lemonhc.com/pharm-api/api/pharm/getSimplePreviewPrescription/33100268/16031890/2000012030
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

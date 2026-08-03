@@ -1,0 +1,22 @@
+info:
+  name: 인증서 비밀번호 생성
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: https://lemoncare-dev.lemonhc.com/api/cert/rest/getCertSignPass
+  body:
+    type: json
+    data: "{\r
+
+      \    \"plain\" : \"yumc1004**\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

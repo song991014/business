@@ -1,0 +1,15 @@
+info:
+  name: 약국용 전자처방전 생성
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: https://ep-api-dev.lemonhc.com/test-pharm-api/pharm/download/37100033/00000002/20260329/81001.pdf
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

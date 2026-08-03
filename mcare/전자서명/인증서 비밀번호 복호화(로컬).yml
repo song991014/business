@@ -1,0 +1,32 @@
+info:
+  name: 인증서 비밀번호 복호화(로컬)
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: http://localhost:28087/rest/getBillInfo2?hospitalCd=38100525&pEnc=3QxYx31fQqFMe6CFkO4ylt%2Bcm8Fk83oCarL3REXn4NVRXw%2FGWWkFX7SEMmz7ZrEo
+  headers:
+    - name: hospitalCd
+      value: "38100525"
+  params:
+    - name: hospitalCd
+      value: "38100525"
+      type: query
+    - name: pEnc
+      value: 3QxYx31fQqFMe6CFkO4ylt%2Bcm8Fk83oCarL3REXn4NVRXw%2FGWWkFX7SEMmz7ZrEo
+      type: query
+  body:
+    type: json
+    data: "{\r
+
+      \    \"plain\" : \"cEmal/b18on/qxHLXihuSg==\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,7 @@
+info:
+  name: 전자서명
+  type: folder
+  seq: 2
+
+request:
+  auth: inherit
