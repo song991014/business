@@ -1,0 +1,29 @@
+info:
+  name: 4. 배차[운행] 변경 콜백
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{LEMON_BASE_URL}}/pharmacist/v1/sd/allocate-change"
+  headers:
+    - name: Authorization
+      value: Bearer {{SD_JWT_TOKEN}}
+  body:
+    type: json
+    data: |-
+      {
+        "orderNo": "13",
+        "sdOrderNo": "58754875",
+        "statusTime": "2025-04-10 14:15:05",
+        "riderId": "123123",
+        "riderDid": "did:rootlab:2VCDfkG9wHXzBf3wRiRKsvRAYu6teiNwD79WDdHQiwq7",
+        "riderPhone": "01012341234"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

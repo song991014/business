@@ -1,0 +1,35 @@
+info:
+  name: 1. 인증토큰 발급
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{SD_BASE_URL}}/Auth/Generate-Token"
+  headers:
+    - name: KEY
+      value: "{{KEY}}"
+      description: 로지올에서 발행한 인증키
+    - name: API_COM_GBN
+      value: "{{API_COM_GBN}}"
+      description: 로지올에서 발행한 API 업체(브랜드) 구분 코드
+  body:
+    type: json
+    data: |-
+      {
+          "API_KEY" : "{{KEY}}"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        const body = res.body;
+        bru.setEnvVar("LEMON_JWT_TOKEN", body.ACCESS_TOKEN);
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

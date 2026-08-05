@@ -1,0 +1,44 @@
+info:
+  name: 3. 배달 등록
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{SD_BASE_URL}}/Order/Insert"
+  headers:
+    - name: Authorization
+      value: Bearer  {{LEMON_JWT_TOKEN}}
+    - name: KEY
+      value: "{{KEY}}"
+      description: 로지올에서 발행한 인증키
+    - name: API_COM_GBN
+      value: "{{API_COM_GBN}}"
+      description: 로지올에서 발행한 API 업체(브랜드) 구분 코드
+  body:
+    type: json
+    data: |-
+      {
+          "ORDER_TYPE": "Receipt",
+          "ORDER_NO": "36",
+          "SHOP_CODE": "37806521",
+          "SHORT_ORDER_CODE": "",
+          "ORDER_RCV_TEL": "01012345678",
+          "TARGET_ADDR": "서울 금천구 디지털로10길 9 123",
+          "TARGET_ADDR_NEW": "서울 금천구 디지털로10길 9 123",
+          "PRE_ORDER_YN": "N",
+          "PRE_ORDER_DATE": "",
+          "COOK_TIME": 10,
+          "DVRY_MSPC": "레몬헬스케어 약배송 테스트 입니다.",
+          "ORDER_AMT": 10000,
+          "PAY_GBN": "9",
+          "IS_CONTACTLESS": "N",
+          "PATIENT_DID": "did:rootlab"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

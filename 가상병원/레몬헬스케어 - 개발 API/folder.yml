@@ -1,0 +1,7 @@
+info:
+  name: 레몬헬스케어 - 개발 API
+  type: folder
+  seq: 2
+
+request:
+  auth: inherit

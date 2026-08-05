@@ -1,0 +1,30 @@
+info:
+  name: 5. 배달등록 취소
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{SD_BASE_URL}}/Order/Cancel"
+  headers:
+    - name: Authorization
+      value: Bearer  {{LEMON_JWT_TOKEN}}
+    - name: KEY
+      value: "{{KEY}}"
+      description: 로지올에서 발행한 인증키
+    - name: API_COM_GBN
+      value: "{{API_COM_GBN}}"
+      description: 로지올에서 발행한 API 업체(브랜드) 구분 코드
+  body:
+    type: json
+    data: |-
+      {
+          "SD_ORDER_NO": 589987765
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

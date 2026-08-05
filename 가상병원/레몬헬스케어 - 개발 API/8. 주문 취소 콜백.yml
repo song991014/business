@@ -1,0 +1,30 @@
+info:
+  name: 8. 주문 취소 콜백
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{LEMON_BASE_URL}}/pharmacist/v1/sd/cancel"
+  headers:
+    - name: Authorization
+      value: Bearer {{SD_JWT_TOKEN}}
+  body:
+    type: json
+    data: |-
+      {
+        "orderNo": "32",
+        "sdOrderNo": "589987836",
+        "statusTime": "2025-04-10 14:15:05",
+        "riderId": "123123",
+        "riderDid": "did:rootlab:2VCDfkG9wHXzBf3wRiRKsvRAYu6teiNwD79WDdHQiwq7",
+        "riderPhone": "01012341234",
+        "cancelReason": "환자요청"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

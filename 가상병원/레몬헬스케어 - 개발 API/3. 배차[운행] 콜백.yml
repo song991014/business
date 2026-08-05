@@ -1,0 +1,30 @@
+info:
+  name: 3. 배차[운행] 콜백
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LEMON_BASE_URL}}/pharmacist/v1/sd/allocate"
+  headers:
+    - name: Authorization
+      value: Bearer {{SD_JWT_TOKEN}}
+  body:
+    type: json
+    data: |-
+      {
+        "orderNo": "00052",
+        "sdOrderNo": "972920572",
+        "statusTime": "2025-12-03 14:15:24",
+        "riderId": "N9A4F9KDfhtAXbceRRd8nfyky-cSF-MmDIOLjDUvJI79wEiZz0qxblbPj_ZxChjT1Pd4gAKVoqOmAulwhaG_LXEO7gTZxQ4UA5UGPtyBhHnLwCajlX-Mdf8zKLS46Zu-77Fkbirnr1jvybBKtfiLTd2NZu4ziu3R4uxi_JAUQcfqGoL0mB-ZZ_HDCiodKXzhT-B3lLkoRp9w3KGvldKGoOnwIpuZ93brUSdTNkntSloM_zrVbsYOKNM_uQvIW3IrQ8wEEwgPm-PwGq0AWSm9G2TWnyhF3N6lh3udnxPv1Bok9dCwIacJaTEYuTaLAS34O0GoO47Du05rsfDC_u-qZA",
+        "riderDid": "did:rootlab:HrR1duKvU8NXJQ4zFmDmJUhKRizwRr5dNVmaJdyH2dzn",
+        "riderPhone": "j6mZjBI1ZipETDb6sZhbwyAR0O3xSckyAe_l1hVTxfdIbVnR4xipnmHYKb_nb861xfE6ORUfYPDpQMbXFXCGDRVqjfAvHdin4OgRH53Sxm5nTSFyUCjoU-JjZU9YL1--AyFmG16v5lgoWb58Ttr5_sXGX7aJQc4k68TIXY85Pz6dIXoyHTDOxO8luwOGbESfQKqk_WF5XGJHrxYlRZV0d7yFu0FFpU1Gn7qRcrqdh0M8dWVpHnSw1mjMh11AYO3Z40I_dxGYIUU9eMLzohQ84_2wwlLdCw1B3kDFIosttMNb32U8-u8AXOZftvM0K0zS-O_qy1hDTCSuHtIYhnpftw",
+        "cancelReason": null
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

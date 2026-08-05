@@ -1,0 +1,20 @@
+name: vhs-dev
+variables:
+  - secret: true
+    name: KEY
+    description: 로지올에서 발행한 인증키
+  - secret: true
+    name: API_COM_GBN
+    description: 로지올에서 발행한 API 업체(브랜드) 구분 코드
+  - name: SD_BASE_URL
+    value: https://tb-b2b-api.logiall.com:35443
+    description: 생각대로 개발 접속 URL
+  - name: LEMON_JWT_TOKEN
+    value: ""
+    description: ""
+  - name: LEMON_BASE_URL
+    value: https://vhs-dev.khidi.or.kr/api
+    description: 레몬 개발 접속 URL
+  - name: SD_JWT_TOKEN
+    value: ""
+    description: ""

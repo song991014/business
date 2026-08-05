@@ -1,0 +1,26 @@
+info:
+  name: 1. 토큰발급
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{LEMON_BASE_URL}}/pharmacist/v1/sd/generate-token?deliveryCd=c6XSeUU4O1KRYaP0GqiuPw=="
+  params:
+    - name: deliveryCd
+      value: c6XSeUU4O1KRYaP0GqiuPw==
+      type: query
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        const body = res.body;
+        bru.setEnvVar("SD_JWT_TOKEN", body.accessToken);
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

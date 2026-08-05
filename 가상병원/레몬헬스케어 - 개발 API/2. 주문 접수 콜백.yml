@@ -1,0 +1,26 @@
+info:
+  name: 2. 주문 접수 콜백
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{LEMON_BASE_URL}}/pharmacist/v1/sd/receipt"
+  headers:
+    - name: Authorization
+      value: Bearer {{SD_JWT_TOKEN}}
+  body:
+    type: json
+    data: |-
+      {
+        "orderNo": "00073",
+        "sdOrderNo": "589989346",
+        "statusDateTime": "2025-04-10 14:15:05"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

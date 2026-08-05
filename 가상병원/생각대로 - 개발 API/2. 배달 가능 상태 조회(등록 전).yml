@@ -1,0 +1,32 @@
+info:
+  name: 2. 배달 가능 상태 조회(등록 전)
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{SD_BASE_URL}}/Order/Condition"
+  headers:
+    - name: Authorization
+      value: Bearer  {{LEMON_JWT_TOKEN}}
+    - name: KEY
+      value: "{{KEY}}"
+      description: 로지올에서 발행한 인증키
+    - name: API_COM_GBN
+      value: "{{API_COM_GBN}}"
+      description: 로지올에서 발행한 API 업체(브랜드) 구분 코드
+  body:
+    type: json
+    data: |-
+      {
+          "SHOP_CODE": "00000001",
+          "TARGET_ADDR": "qH2cNupFNl2Da9t0_pWDHMOOI-fnnpthSHlXyaDly9wXm95Y8Hd2ETjGPNCOAqexlvGmjgJDF3Zsa9jqtFdV7wqmwoyX_lF08gF2-nhwCA3bgXqyn-7hRpgSdfURuejcJn0-LqBqkHaH28YMEBgImpanHDA53zWxq_0hyhW-JfXo1wpuhUHKVD4pd1JUTHFqXmShzVPFvyQIwkWTAa4KyIZdPZcV9E2Zr55-vnZoBoJE0Z3SC7lzbaa2KZC2RDC4nFUWDPFwcTH3Z-uAovV7wsYL-bUYsqXQIRnUnu7cskrJiX2FGaNOZ7F5uZgquFTczxO6DGvLoD-euKWP96ZWeQ",
+          "TARGET_ADDR_NEW": "qH2cNupFNl2Da9t0_pWDHMOOI-fnnpthSHlXyaDly9wXm95Y8Hd2ETjGPNCOAqexlvGmjgJDF3Zsa9jqtFdV7wqmwoyX_lF08gF2-nhwCA3bgXqyn-7hRpgSdfURuejcJn0-LqBqkHaH28YMEBgImpanHDA53zWxq_0hyhW-JfXo1wpuhUHKVD4pd1JUTHFqXmShzVPFvyQIwkWTAa4KyIZdPZcV9E2Zr55-vnZoBoJE0Z3SC7lzbaa2KZC2RDC4nFUWDPFwcTH3Z-uAovV7wsYL-bUYsqXQIRnUnu7cskrJiX2FGaNOZ7F5uZgquFTczxO6DGvLoD-euKWP96ZWeQ"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

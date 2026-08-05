@@ -1,0 +1,29 @@
+info:
+  name: 6. 픽업 콜백
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{LEMON_BASE_URL}}/pharmacist/v1/sd/pickup"
+  headers:
+    - name: Authorization
+      value: Bearer {{SD_JWT_TOKEN}}
+  body:
+    type: json
+    data: |-
+      {
+        "orderNo": "13",
+        "sdOrderNo": "58754875",
+        "statusTime": "2025-04-10 14:15:05",
+        "riderId": "123123",
+        "riderDid": "did:rootlab:2VCDfkG9wHXzBf3wRiRKsvRAYu6teiNwD79WDdHQiwq7",
+        "riderPhone": "01012341234"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

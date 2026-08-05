@@ -1,0 +1,7 @@
+info:
+  name: 생각대로 - 개발 API
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
